@@ -1,11 +1,16 @@
 <html>
     <head>
         <h1>This is Current Date Time JS Demo</h1>
-        <script>
-            var today = new Date();
+       
+       <script>
+
+// JS CODE TO DISPLAY CURRENT DATE AND TIME
+
+  var today = new Date();
   var day = today.getDay();
   var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  console.log("Today is : " + daylist[day] + ".");
+  document.writeln("Today is : " + daylist[day] + ".");
+  document.write("<br>");
   var hour = today.getHours();
   var minute = today.getMinutes();
   var second = today.getSeconds();
@@ -37,13 +42,48 @@
   prepand=' AM';
   } 
   } 
-console.log("Current Time : "+hour + prepand + " : " + minute + " : " + second);
-
+   document.writeln("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+   document.write("<br>");
         </script>
     </head>
     <body>
-         <h2>Welcome to the Web Page </h2>
-         <p>My First Paragraph</p>
-        <button onclick="window.print()">Print Page</button>
+        
+        <script>
+
+// JS CODE TO DISPLAY DATE IN DD/MM/YYYY or MM/DD/YYYY FORMAT
+
+var today = new Date();
+var dd = today.getDate();
+
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+if(dd<10) 
+{
+    dd='0'+dd;
+} 
+
+if(mm<10) 
+{
+    mm='0'+mm;
+} 
+today = mm+'-'+dd+'-'+yyyy;
+document.writeln(today);
+document.write("<br>");
+today = mm+'/'+dd+'/'+yyyy;
+document.writeln(today);
+document.write("<br>");
+today = dd+'-'+mm+'-'+yyyy;
+document.writeln(today);
+document.write("<br>");
+today = dd+'/'+mm+'/'+yyyy;
+document.writeln(today);
+document.write("<br>");
+
+        </script>
+
+<!-- JS TO PRINT THE PAGE -->
+
+<button onclick="window.print()">Print Page</button>
+
     </body>
 </html>
